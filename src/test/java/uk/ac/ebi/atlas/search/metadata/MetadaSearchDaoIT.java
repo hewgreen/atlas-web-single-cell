@@ -33,12 +33,12 @@ class MetadaSearchDaoIT {
 
     @Test
     void searchForValidMetadataReturnsCellIds() {
-        assertThat(subject.search("organism part")).isNotEmpty();
+        assertThat(subject.searchCellIdsByMetadata("organism part")).isNotEmpty();
     }
 
     @Test
     void searchForInvalidMetadataReturnsEmpty() {
-        assertThat(subject.search("foobar")).isEmpty();
+        assertThat(subject.searchCellIdsByMetadata("foobar")).isEmpty();
     }
 
 }
